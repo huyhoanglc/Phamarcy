@@ -12,14 +12,13 @@ Pharmacy
     <li><strong>Semester:</strong> II</li>
     <li><strong>Class No:</strong> T5.2308.M0</li>
     <li><strong>Group No:</strong> 02</li>
-    <li><strong>List Of Member:<span style="font-size: 18px; color: #6f42c1;">👨‍🎓👩‍🎓👨‍🎓👩‍🎓👨‍🎓</span></strong> 
-        
+    <li><strong>List Of Member:</strong> 
         <ul>
-            <li>Hoàng Gia Huy (Student1501057)</li>
-            <li>Nguyễn Anh Minh (Student1501053)</li>
-            <li>Nguyễn Anh Quân (Student1501059)</li>
-            <li>Trần Nhật Linh (Student1501060)</li>
-            <li>Đoàn Đức Độ (Student1491746)</li>
+            <span style="font-size: 18px; color: #6f42c1;">👨‍🎓</span><li>Hoàng Gia Huy (Student1501057)</li>
+            <span style="font-size: 18px; color: #6f42c1;">👨‍🎓</span><li>Nguyễn Anh Minh (Student1501053)</li>
+           <span style="font-size: 18px; color: #6f42c1;">👨‍🎓</span> <li>Nguyễn Anh Quân (Student1501059)</li>
+            <span style="font-size: 18px; color: #6f42c1;">👨‍🎓</span><li>Trần Nhật Linh (Student1501060)</li>
+           <span style="font-size: 18px; color: #6f42c1;">👨‍🎓</span> <li>Đoàn Đức Độ (Student1491746)</li>
         </ul>
     </li>
 </ul>

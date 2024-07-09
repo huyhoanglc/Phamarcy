@@ -1,5 +1,5 @@
 <h1 style="font-size: 36px; font-weight: bold; text-align: center; color: #007BFF;">
-    <span style="font-size: 36px;">🩺</span> Pharmacy
+    <span style="font-size: 36px;">🩺</span> Pharmacy<span style="font-size: 36px;">💊</span> 
 </h1>
 <hr style="border: 3px solid #6f42c1;">
 <p>Pharmacy is a sophisticated application designed to streamline the management and dispensing of medications. It provides a comprehensive suite of pharmaceutical services, allowing customers to effortlessly manage their prescriptions and medication schedules. Additionally, the application features robust tools for staff management, including salary tracking and working hours monitoring, making it an indispensable tool for modern pharmacies.</p>

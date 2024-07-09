@@ -8,7 +8,7 @@ Pharmacy
 <ul>
     <li><strong>Supervisor:</strong> PHẠM CÔNG DANH</li>
     <li><strong>Semester:</strong> II</li>
-    <li><strong>Batch No:</strong> T5.2308.M0</li>
+    <li><strong>Class No:</strong> T5.2308.M0</li>
     <li><strong>Group No:</strong> 02</li>
     <li><strong>List Of Member:</strong>
         <ul>

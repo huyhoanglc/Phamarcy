@@ -26,17 +26,17 @@
 <h2 style="font-size: 24px; margin-top: 20px; color: #007BFF;">Resources</h2>
 <ul>
     <li><strong>Documentation:</strong> 
-        <a href="https://github.com/huyhoanglc/Phamarcy/blob/main/Pharmacy_Group02_T5.2308.M0.docx" style="color: #6f42c1;">
+        <a href="https://github.com/huyhoanglc/Phamarcy/blob/main/Pharmacy_Group02_T5.2308.M0.docx" target="_blank" style="color: #6f42c1;">
             <img src="https://img.shields.io/badge/GitHub-Documentation-blue?style=flat-square&logo=github">
         </a>
     </li>
     <li><strong>Database:</strong> 
-        <a href="https://github.com/huyhoanglc/Phamarcy/blob/main/Phamarcy.bak" style="color: #6f42c1;">
+        <a href="https://github.com/huyhoanglc/Phamarcy/blob/main/Phamarcy.bak" target="_blank" style="color: #6f42c1;">
             <img src="https://img.shields.io/badge/GitHub-Database-blue?style=flat-square&logo=github">
         </a>
     </li>
     <li><strong>Link video giới thiệu app:</strong> 
-        <a href="https://www.youtube.com/watch?v=ul8Kn-_z0Gk" style="color: #c82333;">
+        <a href="https://www.youtube.com/watch?v=ul8Kn-_z0Gk" target="_blank" style="color: #c82333;">
             <img src="https://img.shields.io/badge/YouTube-Introduction-red?style=flat-square&logo=youtube">
         </a>
     </li>

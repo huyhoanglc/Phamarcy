@@ -36,7 +36,7 @@
         </a>
     </li>
     <li><strong>Link video giới thiệu app:</strong> 
-        <a href="https://youtu.be/NVnqKv4fPKo" style="color: #c82333;">
+        <a href="https://www.youtube.com/watch?v=ul8Kn-_z0Gk" style="color: #c82333;">
             <img src="https://img.shields.io/badge/YouTube-Introduction-red?style=flat-square&logo=youtube">
         </a>
     </li>

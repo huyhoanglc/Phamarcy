@@ -1,7 +1,7 @@
 <h1 style="font-size: 36px; font-weight: bold; text-align: center; color: #007BFF;">
 Pharmacy
 </h1>
-<hr style="border: 2px solid blue;">
+<hr style="border: 3px solid blue;">
 <p>Pharmacy is an application designed for managing and dispensing medications, offering a comprehensive range of pharmaceutical services. Customers can manage their prescriptions and medication schedules conveniently. The application also includes features for managing staff, such as tracking salaries and working hours.</p>
 
 <h2 style="font-size: 24px; margin-top: 20px; color: #007BFF;">Details</h2>

@@ -2,15 +2,18 @@
 Pharmacy
 </h1>
 <hr style="border: 3px solid #6f42c1;">
-<p>Pharmacy is an application designed for managing and dispensing medications, offering a comprehensive range of pharmaceutical services. Customers can manage their prescriptions and medication schedules conveniently. The application also includes features for managing staff, such as tracking salaries and working hours.</p>
+<p>Pharmacy is a sophisticated application designed to streamline the management and dispensing of medications. It provides a comprehensive suite of pharmaceutical services, allowing customers to effortlessly manage their prescriptions and medication schedules. Additionally, the application features robust tools for staff management, including salary tracking and working hours monitoring, making it an indispensable tool for modern pharmacies.</p>
 
 <h2 style="font-size: 24px; margin-top: 20px; color: #007BFF;">Details</h2>
 <ul>
-    <li><strong>Supervisor:</strong> PHẠM CÔNG DANH</li>
+    <li><strong>Supervisor:</strong> 
+        <span style="font-size: 18px; color: #6f42c1;">👨‍🏫</span> PHẠM CÔNG DANH
+    </li>
     <li><strong>Semester:</strong> II</li>
     <li><strong>Class No:</strong> T5.2308.M0</li>
     <li><strong>Group No:</strong> 02</li>
-    <li><strong>List Of Member:</strong>
+    <li><strong>List Of Member:<span style="font-size: 18px; color: #6f42c1;">👨‍🎓👩‍🎓👨‍🎓👩‍🎓👨‍🎓</span></strong> 
+        
         <ul>
             <li>Hoàng Gia Huy (Student1501057)</li>
             <li>Nguyễn Anh Minh (Student1501053)</li>
@@ -41,5 +44,5 @@ Pharmacy
 </ul>
 
 <div style="text-align: center; margin-top: 40px;">
-    Thank you for visiting our application.
+    ❤️ Thank you for visiting our application. ❤️
 </div>

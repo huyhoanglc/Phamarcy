@@ -26,12 +26,12 @@
 <h2 style="font-size: 24px; margin-top: 20px; color: #007BFF;">Resources</h2>
 <ul>
     <li><strong>Documentation:</strong> 
-        <a href="https://github.com/huyhoanglc/Phamarcy/blob/main/Pharmacy_Group02_T5.2308.M0.docx" target="blank" style="color: #6f42c1;">
+        <a href="https://github.com/huyhoanglc/Phamarcy/tree/main/Documents" target="blank" style="color: #6f42c1;">
             <img src="https://img.shields.io/badge/GitHub-Documentation-blue?style=flat-square&logo=github">
         </a>
     </li>
     <li><strong>Database:</strong> 
-        <a href="https://github.com/huyhoanglc/Phamarcy/blob/main/Phamarcy.bak" target="blank" style="color: #6f42c1;">
+        <a href="https://github.com/huyhoanglc/Phamarcy/tree/main/Database" target="blank" style="color: #6f42c1;">
             <img src="https://img.shields.io/badge/GitHub-Database-blue?style=flat-square&logo=github">
         </a>
     </li>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="818.0" prefWidth="1542.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eproject.ImportOrderReceiptController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="300.0" layoutY="200.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: skyblue;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text fill="#1c20f2" layoutX="82.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Import Order Receipt">
+                           <font>
+                              <Font name="Arial Bold" size="36.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <right>
+                  <AnchorPane prefHeight="500.0" prefWidth="535.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="delete_receipt" layoutX="14.0" layoutY="4.0" prefHeight="698.0" prefWidth="506.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: blue; -fx-border-radius: 10px; -fx-border-width: 2px;">
+                           <children>
+                              <AnchorPane layoutX="9.0" layoutY="51.0" prefHeight="60.0" prefWidth="480.0" style="-fx-border-color: blue; -fx-border-radius: 8px; -fx-border-width: 1px;">
+                                 <children>
+                                    <Text fx:id="txtMedicineName" layoutX="14.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="150.13671875">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="2.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity:" />
+                                    <TextField fx:id="Qty01" layoutX="52.0" layoutY="24.0" prefHeight="25.0" prefWidth="30.0" />
+                                    <Text layoutX="89.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crate" />
+                                    <TextField fx:id="Qty02" layoutX="124.0" layoutY="24.0" prefHeight="25.0" prefWidth="30.0" />
+                                    <Text layoutX="161.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Box" />
+                                    <TextField fx:id="Qty03" layoutX="188.0" layoutY="24.0" prefHeight="25.0" prefWidth="30.0" />
+                                    <Text layoutX="225.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pill/Bottle" wrappingWidth="54.4453125" />
+                                    <Text layoutX="300.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unit Price:" wrappingWidth="64.63671875">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="txtUnitPrice" layoutX="374.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="65.63671875">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Button fx:id="btnAddItem" layoutX="350.0" layoutY="3.0" mnemonicParsing="false" onAction="#btn_add_item" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: skyblue;">
+                                       <graphic>
+                                          <FontAwesomeIcon glyphName="PLUS" size="20px" />
+                                       </graphic></Button>
+                                    <Button fx:id="btnEditItem" layoutX="390.0" layoutY="3.0" mnemonicParsing="false" onAction="#btn_edit_item" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: skyblue;">
+                                       <graphic>
+                                          <FontAwesomeIcon glyphName="FILE" size="20px" />
+                                       </graphic></Button>
+                                    <Button fx:id="btnDeleteItem" layoutX="430.0" layoutY="3.0" mnemonicParsing="false" onAction="#btn_delete_item" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: red;">
+                                       <graphic>
+                                          <FontAwesomeIcon glyphName="TRASH" size="20px" />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <Line endX="304.5" layoutX="150.0" layoutY="613.0" startX="-100.0" />
+                              <Text layoutX="292.0" layoutY="636.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:" wrappingWidth="56.63671875">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="txtExpectTotal" layoutX="349.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="105.63671875">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="btnFinishOrder" layoutX="250.0" layoutY="644.0" mnemonicParsing="false" onAction="#btn_finish" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: skyblue;" text="Finish" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnReceiptDelete" layoutX="379.0" layoutY="644.0" mnemonicParsing="false" onAction="#btn_Rdelete" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnOrder" layoutX="122.0" layoutY="644.0" mnemonicParsing="false" onAction="#btn_order" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: skyblue;" text="Order" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Text layoutX="20.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine: ">
+                                 <font>
+                                    <Font name="Arial Bold" size="12.0" />
+                                 </font></Text>
+                              <Text layoutX="249.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supplier: ">
+                                 <font>
+                                    <Font name="Arial Bold" size="12.0" />
+                                 </font></Text>
+                              <Text layoutX="15.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ReceiptID:">
+                                 <font>
+                                    <Font name="Arial Black" size="12.0" />
+                                 </font></Text>
+                              <Text fx:id="txtReceiptID" layoutX="91.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                                 <font>
+                                    <Font name="Arial Black" size="12.0" />
+                                 </font>
+                              </Text>
+                              <TableView fx:id="TableReceiptDetail" layoutX="14.0" layoutY="144.0" onMouseClicked="#selectItem" prefHeight="461.0" prefWidth="476.0" stylesheets="@eproject.css">
+                                <columns>
+                                  <TableColumn fx:id="col_RMedicineID" prefWidth="75.0" text="MedicineID" />
+                                  <TableColumn fx:id="col_RMediName" prefWidth="116.5" text="Medicine Name" />
+                                    <TableColumn fx:id="col_Qty01" prefWidth="60.0" text="Qty01" />
+                                    <TableColumn fx:id="col_Qty02" prefWidth="60.0" text="Qty02" />
+                                    <TableColumn fx:id="col_Qty03" prefWidth="60.0" text="Qty03" />
+                                    <TableColumn fx:id="col_ImportPrice" prefWidth="102.5" text="Import Price" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="btnPrint" layoutX="20.0" layoutY="645.0" mnemonicParsing="false" onAction="#btn_print" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: skyblue;">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="PRINT" size="20px" />
+                                 </graphic>
+                              </Button>
+                              <ComboBox fx:id="SelectMedicine" layoutX="79.0" layoutY="11.0" onMouseClicked="#showMedicine" prefWidth="150.0" />
+                              <ComboBox fx:id="SelectSupplier" layoutX="304.0" layoutY="11.0" onAction="#showSupplier" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </right>
+               <center>
+                  <AnchorPane prefHeight="500.0" prefWidth="650.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="SearchReceipt" layoutX="79.0" layoutY="8.0" onAction="#search_receipt" prefHeight="30.0" prefWidth="350.0" promptText="Search Receipt" styleClass="search" stylesheets="@eproject.css" />
+                      <AnchorPane layoutX="72.0" layoutY="44.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="657.0" prefWidth="933.0" style="-fx-background-radius: 10px;">
+                           <children>
+                              <TableView fx:id="TableReceipt" layoutX="-4.0" onMouseClicked="#selectReceipt" prefHeight="658.0" prefWidth="880.0" stylesheets="@eproject.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="col_ReceiptID" prefWidth="99.99996948242188" text="ReceiptID" />
+                                  <TableColumn fx:id="col_orderDate" prefWidth="156.79994201660156" text="Order Date" />
+                                    <TableColumn fx:id="col_receiveDate" minWidth="7.0" prefWidth="167.2000732421875" text="Receive Date" />
+                                    <TableColumn fx:id="col_supplier" prefWidth="152.79998779296875" text="Supplier" />
+                                    <TableColumn fx:id="col_Total" prefWidth="168.800048828125" text="Total" />
+                                    <TableColumn fx:id="col_Status" prefWidth="180.800048828125" text="Status" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <FontAwesomeIcon glyphName="SEARCH" layoutX="83.0" layoutY="30.0" size="20" text="" />
+                        <Button fx:id="btnAddReceipt" layoutX="874.0" layoutY="8.0" mnemonicParsing="false" onAction="#btn_add_receipt" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: skyblue;" text="Add New" textFill="WHITE">
+                           <font>
+                              <Font name="Tahoma Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

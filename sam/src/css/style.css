@@ -1,0 +1,58 @@
+
+.btn_hn{
+    -fx-background-color:  transparent;
+    -fx-text-fill: black;
+}
+.btn_hn:hover {
+    -fx-border-color: #000033;
+    -fx-border-radius : 10px;
+}
+.pane{
+    -fx-background-color:  #fff;
+    /*-fx-border-radius : 30px;*/
+    -fx-border-color: #c1c1c1;
+    -fx-border-style: solid;
+    -fx-border-width:2px 2px 2px 2px;
+    -fx-background-radius: 30px;
+    -fx-backround-radius : 0px 0px 30px 30px;
+    -fx-border-radius : 0px 0px 30px 30px;
+}
+.btn_admin{
+      -fx-background-color:  transparent;
+/*    -fx-border-color: transparent;*/
+    -fx-text-fill: white;
+}
+.btn_admin:hover {
+    -fx-border-color: #000033;
+    -fx-border-radius : 10px;
+}
+
+.btn {
+    -fx-background-color:  transparent;
+/*    -fx-border-color: transparent;*/
+    -fx-text-fill: white;
+}
+.btn:hover {
+    -fx-text-fill: black;
+}
+
+/*.text-field {
+    -fx-border-color: transparent transparent #3f51b5 transparent;
+    -fx-background-color:  transparent, transparent, transparent, transparent;
+    -fx-prompt-text-fill: derive(-fx-control-inner-background, -30%);
+    -fx-text-fill: #fff;
+    -fx-border-width: 0 0 2 0;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #3f51b5 transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-insets: -1;
+     -fx-prompt-text-fill: transparent;
+}*/
+
+/*.text-field:focused .text-input {
+    -fx-prompt-text-fill: transparent;
+}*/

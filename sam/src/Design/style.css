@@ -1,0 +1,119 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 31 thg 5, 2024, 09:09:15
+    Author     : nguye
+*/
+
+
+.formcheckin{
+    -fx-border-color: black;
+    -fx-background-color: #E6E6FA;
+}
+.bg-header{
+    -fx-background-color: #92B9E3;
+}
+
+.talbe-view .table-column{
+    -fx-alignment: CENTER;
+}
+
+
+.btn{
+    -fx-background-color: #00B63E;
+    -fx-text-fill: white;
+}
+.btn:hover{
+    -fx-background-color: green;
+}
+.border{
+    -fx-border-color: black;
+}
+/*.btn1{
+    -fx-background-color: #E6F1FE;
+    
+}
+.btn2{
+    -fx-background-color: #fea837;
+}*/
+.btn2:hover{
+    -fx-background-color: #b85b56;
+}
+
+.btnadd{
+    -fx-background-color: #1D9E74;
+    
+}
+.btnadd:hover{
+    -fx-background-color: green;
+}
+
+.btnupdate{
+    -fx-background-color: #92B9E3;
+    
+}
+.btnupdate:hover{
+    -fx-background-color: blue;
+}
+
+.btndelete{
+    -fx-background-color: #E04483;
+    
+}
+.btndelete:hover{
+    -fx-background-color: red;
+}
+
+.btnclear{
+    -fx-background-color: #BBC6D9;
+    
+}
+.btnclear:hover{
+    -fx-background-color: #908CB1;
+}
+
+.btnlogout{
+    -fx-background-color: #B85B56;
+}
+.btnlogout:hover{
+    -fx-background-color: #DE741C;
+}
+
+.button-update {
+    -fx-background-color: lightgreen;
+    -fx-text-fill: black; /* Màu chữ */
+    -fx-font-size: 12px;
+}
+
+.button-delete {
+    -fx-background-color: lightcoral;
+    -fx-text-fill: black; /* Màu chữ */
+    -fx-font-size: 12px;
+}
+
+.button-update:hover{
+    -fx-background-color: green;
+}
+.button-delete:hover{
+    -fx-background-color: red;
+}
+
+
+.button-checkin {
+    -fx-background-color: lightgreen;
+    -fx-text-fill: black; /* Màu chữ */
+}
+
+.button-checkout {
+    -fx-background-color: lightcoral;
+    -fx-text-fill: black; /* Màu chữ */
+}
+
+.button-checkin:hover{
+    -fx-background-color: green;
+}
+.button-checkout:hover{
+    -fx-background-color: red;
+}

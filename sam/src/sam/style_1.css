@@ -1,0 +1,85 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 31 thg 5, 2024, 09:09:15
+    Author     : nguye
+*/
+
+
+
+
+
+.bg-white2{
+    -fx-background-color: #F7F8F9;     
+}
+
+
+.btn{
+    -fx-background-color: #00B63E;
+    -fx-text-fill: white;
+}
+.btn:hover{
+    -fx-background-color: green;
+}
+.border{
+    -fx-border-color: black;
+}
+.btn1{
+    -fx-background-color: #E6F1FE;
+    
+}
+.btn3{
+    -fx-background-color: #92B9E3;
+    
+}
+
+.btn4{
+    -fx-background-color: #9AB9E3;
+    
+}
+
+.btn4:hover{
+    -fx-background-color: #6C7EE1;
+    
+}
+
+.btnadd{
+    -fx-background-color: #1D9E74;
+    
+}
+.btnadd:hover{
+    -fx-background-color: green;
+}
+
+.btnupdate{
+    -fx-background-color: #92B9E3;
+    
+}
+.btnupdate:hover{
+    -fx-background-color: blue;
+}
+
+.btndelete{
+    -fx-background-color: #E04483;
+    
+}
+.btndelete:hover{
+    -fx-background-color: red;
+}
+
+.btnclear{
+    -fx-background-color: #BBC6D9;
+    
+}
+.btnclear:hover{
+    -fx-background-color: #908CB1;
+}
+
+.btnlogout{
+    -fx-background-color: #B85B56;
+}
+.btnlogout:hover{
+    -fx-background-color: #DE741C;
+}

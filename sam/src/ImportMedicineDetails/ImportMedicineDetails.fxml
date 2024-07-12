@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="855.0" prefWidth="1540.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ImportMedicineDetails.ImportMedicineDetailsController">
+   <children>
+      <AnchorPane prefHeight="844.0" prefWidth="1532.0">
+         <children>
+            <BorderPane layoutX="96.8" layoutY="60.0" prefHeight="794.0" prefWidth="1458.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="-15.0" AnchorPane.topAnchor="76.0">
+               <top>
+                  <AnchorPane prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text layoutX="14.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Import Medicine Details">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="searchMD" layoutX="14.0" layoutY="75.0" prefHeight="30.0" prefWidth="350.0" promptText="Search" styleClass="search" stylesheets="@../Style/Style.css" />
+                        <FontAwesomeIcon glyphName="SEARCH" layoutX="22.0" layoutY="97.0" size="20" />
+                        <Button fx:id="btnBG" layoutX="984.0" layoutY="74.0" mnemonicParsing="false" onAction="#generateAndSaveBarcode" prefHeight="30.0" prefWidth="125.0" styleClass="btn" stylesheets="@../Style/Style.css" text="Barcode Generator" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <right>
+                  <AnchorPane prefHeight="654.0" prefWidth="307.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="1.0" layoutY="14.0" prefHeight="625.0" prefWidth="280.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: #0091fe; -fx-border-radius: 10px; -fx-border-width: 2px;">
+                           <children>
+                              <VBox alignment="TOP_CENTER" layoutX="15.0" layoutY="22.0" prefHeight="586.0" prefWidth="260.0" style="-fx-background-color: lightgray;">
+                                 <children>
+                                    <AnchorPane accessibleRole="LIST_ITEM" prefHeight="596.0" prefWidth="268.0" style="-fx-background-color: white;" stylesheets="@../Style/Style.css">
+                                       <children>
+                                          <Text layoutX="-4.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine Name" />
+                                          <TextField fx:id="txtMDMedicineName" layoutX="114.0" layoutY="14.0" prefHeight="27.0" prefWidth="140.0" styleClass="inputtext" stylesheets="@../Style/Style.css" />
+                                          <Text layoutX="-3.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Barcode" />
+                                          <TextField fx:id="txtMDBarcode" layoutX="114.0" layoutY="69.0" prefHeight="27.0" prefWidth="140.0" styleClass="inputtext" stylesheets="@../Style/Style.css" />
+                                          <Text layoutX="-4.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Batch No" />
+                                          <TextField fx:id="txtMDBatchno" layoutX="114.0" layoutY="135.0" prefHeight="27.0" prefWidth="140.0" styleClass="inputtext" stylesheets="@../Style/Style.css" />
+                                          <Text layoutX="-4.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Manufacturing Date" wrappingWidth="113.63671875" />
+                                          <DatePicker fx:id="txtMDManDate" layoutX="114.0" layoutY="210.0" prefHeight="27.0" prefWidth="140.0" styleClass="inputtext" stylesheets="@../Style/Style.css" />
+                                          <Text layoutX="7.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expire Date" wrappingWidth="60.13671875" />
+                                          <DatePicker fx:id="txtMDExpireDate" layoutX="114.0" layoutY="284.0" prefHeight="27.0" prefWidth="140.0" styleClass="inputtext" stylesheets="@../Style/Style.css" />
+                                          <Label layoutX="-4.0" layoutY="392.0" text="Quantity" />
+                                          <TextField fx:id="txtQuan1" layoutX="91.0" layoutY="383.0" prefHeight="27.0" prefWidth="47.0" styleClass="inputtext" stylesheets="@../Style/Style.css" />
+                                          <TextField fx:id="txtQuan2" layoutX="155.0" layoutY="383.0" prefHeight="27.0" prefWidth="44.0" styleClass="inputtext" stylesheets="@../Style/Style.css" />
+                                          <TextField fx:id="txtQuan3" layoutX="216.0" layoutY="383.0" prefHeight="27.0" prefWidth="44.0" styleClass="inputtext" stylesheets="@../Style/Style.css" />
+                                          <Label layoutX="-2.0" layoutY="435.0" text="Unit" />
+                                          <TextField fx:id="txtUnit1" layoutX="91.0" layoutY="426.0" prefHeight="27.0" prefWidth="47.0" styleClass="inputtext" stylesheets="@../Style/Style.css" />
+                                          <TextField fx:id="txtUnit2" layoutX="155.0" layoutY="426.0" prefHeight="27.0" prefWidth="44.0" styleClass="inputtext" stylesheets="@../Style/Style.css" />
+                                          <TextField fx:id="txtUnit3" layoutX="216.0" layoutY="426.0" prefHeight="27.0" prefWidth="44.0" styleClass="inputtext" stylesheets="@../Style/Style.css" />
+                                          <Label layoutX="117.0" layoutY="340.0" text="More Unit" />
+                                          <Label layoutX="184.0" layoutY="340.0" text="More Unit" />
+                                          <Label layoutX="199.0" layoutY="405.0" text="≈ " />
+                                          <Label layoutX="138.0" layoutY="405.0" text="≈ " textAlignment="JUSTIFY" />
+                                          <Text layoutX="7.0" layoutY="521.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" wrappingWidth="60.13671875" />
+                                          <ComboBox fx:id="txtMDStatus" layoutX="114.0" layoutY="503.0" prefHeight="25.0" prefWidth="139.0" promptText="Choose....." styleClass="inputtext" stylesheets="@../Style/Style.css" />
+                                          <Button fx:id="btnMDAdd" layoutX="15.0" layoutY="568.0" mnemonicParsing="false" onAction="#AddMD" prefHeight="28.0" prefWidth="66.0" styleClass="btn" stylesheets="@../Style/Style.css" text="Add" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="btnMDUpdate" layoutX="105.0" layoutY="568.0" mnemonicParsing="false" onAction="#UpdateMD" prefHeight="28.0" prefWidth="65.0" styleClass="btn" stylesheets="@../Style/Style.css" text="Update" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                          <Button fx:id="btnMDcancel" layoutX="194.0" layoutY="568.0" mnemonicParsing="false" onAction="#MDCancel" prefHeight="28.0" prefWidth="65.0" styleClass="btn_delete" stylesheets="@../Style/Style.css" text="Cancel" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </right>
+               <left>
+                  <AnchorPane prefHeight="650.0" prefWidth="1132.0" stylesheets="@../Style/Style.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <TableView fx:id="tablemedicinedeteailslist" layoutX="1.0" layoutY="14.0" onMouseClicked="#MedicineDetailsSelect" prefHeight="604.0" prefWidth="1130.0" stylesheets="@../Style/Style.css">
+                           <columns>
+                              <TableColumn fx:id="MD_Col_MedicineName" editable="false" prefWidth="115.0" sortable="false" text="Medicine Name" />
+                              <TableColumn fx:id="MD_Col_Barcode" editable="false" prefWidth="102.0" sortable="false" text="Barcode" />
+                              <TableColumn fx:id="MD_Col_Batchno" editable="false" prefWidth="65.0" sortable="false" text="Batch &#10;  No" />
+                              <TableColumn fx:id="MD_Col_ManuD" editable="false" minWidth="0.0" prefWidth="104.79998779296875" sortable="false" text="Manufacturing &#10;        Date" />
+                              <TableColumn fx:id="MD_Col_ExpD" editable="false" minWidth="0.0" prefWidth="97.5999755859375" sortable="false" text="Expire &#10; Date" />
+                              <TableColumn fx:id="MD_Col_Quantity1" editable="false" minWidth="0.0" prefWidth="77.60003662109375" sortable="false" text="Quantity" />
+                              <TableColumn fx:id="MD_Col_Unit1" editable="false" minWidth="0.0" prefWidth="62.39996337890625" sortable="false" text="Unit" />
+                              <TableColumn fx:id="MD_Col_Quantity2" editable="false" minWidth="0.0" prefWidth="74.39996337890625" sortable="false" text="Quantity" />
+                              <TableColumn fx:id="MD_Col_Unit2" editable="false" minWidth="0.0" prefWidth="70.4000244140625" sortable="false" text="Unit" />
+                              <TableColumn fx:id="MD_Col_Quantity3" editable="false" minWidth="0.0" prefWidth="73.5999755859375" sortable="false" text="Quantity" />
+                              <TableColumn fx:id="MD_Col_Unit3" editable="false" minWidth="0.0" prefWidth="73.59991455078125" sortable="false" text="Unit" />
+                              <TableColumn fx:id="MD_Col_Status" editable="false" minWidth="0.0" prefWidth="87.99993896484375" sortable="false" text="Status" />
+                              <TableColumn fx:id="MD_Col_AC" editable="false" minWidth="0.0" prefWidth="124.79998779296875" sortable="false" text="Action" />
+                           </columns>
+                           <styleClass>
+                              <String fx:value="talbe-view" />
+                              <String fx:value="column-hearder-background" />
+                              <String fx:value="column-hearder" />
+                              <String fx:value="filter" />
+                              <String fx:value="table-view" />
+                              <String fx:value="table-column" />
+                           </styleClass>
+                        </TableView>
+                        <Pagination fx:id="pgtMD" layoutX="6.0" layoutY="14.0" maxPageIndicatorCount="5" pageCount="20" prefHeight="648.0" prefWidth="1126.0" />
+                     </children>
+                  </AnchorPane>
+               </left>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

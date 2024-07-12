@@ -1,0 +1,65 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jun 1, 2024, 10:42:37 AM
+    Author     : Admin
+*/
+
+.btn{
+    -fx-background-color: #0091fe;
+   }
+   .btn:hover{
+    -fx-background-color: #005FA6; 
+      
+   }
+   .search{
+    -fx-padding: 0px 0px 0px 33px;
+    -fx-border-color: gray;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+   }
+
+   .search:focused{
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.5),5,0,0,0);
+   }   
+   
+.table-view{
+    -fx-background-color: transparent;
+    -fx-padding: 0px;
+    -fx-border-color: #0091fe;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px
+}
+.talbe-view .table-column{
+    -fx-alignment: CENTER;
+}
+.talbe-view .column-header-background{
+    -fx-background-color: #0091fe;
+    -fx-background-radius: 8px 8px 0px 0px;
+    -fx-background-insets: 0 0 0 0; 
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white; 
+}
+
+.talbe-view .column-header, .filter{
+    -fx-background-color: transparent;
+    -fx-size: 40px;
+    
+}
+
+.inputtext{
+    -fx-border-color: gray;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+}
+.inputtext:focused{
+    
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.5),5,0,0,0);
+}

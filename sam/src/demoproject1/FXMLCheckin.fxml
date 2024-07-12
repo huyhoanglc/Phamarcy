@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="tableCheckin" prefHeight="400.0" prefWidth="600.0" styleClass="formcheckin" stylesheets="@../Design/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demoproject1.FXMLCheckinController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Check in with Code ID">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="187.0" text="Code ID : ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCheckin" layoutX="193.0" layoutY="187.0" prefHeight="26.0" prefWidth="266.0" />
+      <Button fx:id="btnCheckin" layoutX="187.0" layoutY="278.0" mnemonicParsing="false" onAction="#handleCheckin" prefHeight="26.0" prefWidth="226.0" styleClass="button-checkin" stylesheets="@../Design/style.css" text="Check in">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btncancel" layoutX="250.0" layoutY="340.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="26.0" prefWidth="100.0" styleClass="btndelete" stylesheets="@../Design/style.css" text="Cancel">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="75.0" layoutY="80.0" text="Staff ID : ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="135.0" text="Staff Name : ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStaffID" layoutX="193.0" layoutY="79.0" prefHeight="26.0" prefWidth="266.0" />
+      <TextField fx:id="txtStaffname" layoutX="193.0" layoutY="134.0" prefHeight="26.0" prefWidth="266.0" />
+   </children>
+</AnchorPane>

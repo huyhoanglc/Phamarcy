@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="443.0" prefWidth="424.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demoproject1.FXMLUpdatePayrollController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="340.0" text="Update Payroll information" textFill="#0d10cce8">
+         <font>
+            <Font name="Arial Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="66.0" prefHeight="20.0" prefWidth="95.0" text="Staff ID">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStaffID" layoutX="177.0" layoutY="63.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label layoutX="61.0" layoutY="109.0" text="PayPeriod Start">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="155.0" text="PayPeriod End">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="202.0" text="Standard Days">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtstandardday" layoutX="177.0" layoutY="199.0" prefHeight="26.0" prefWidth="186.0" />
+      <Button fx:id="btnUpdatepayroll" layoutX="63.0" layoutY="386.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="26.0" prefWidth="107.0" styleClass="btnupdate" stylesheets="@../Design/style.css" text="Update">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphName="LEVEL_UP" />
+         </graphic>
+      </Button>
+      <Button fx:id="btncancel" layoutX="262.0" layoutY="387.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="26.0" prefWidth="100.0" styleClass="btndelete" stylesheets="@../Design/style.css" text="Cancel">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphName="EXIT" />
+         </graphic>
+      </Button>
+      <DatePicker fx:id="datePaystart" layoutX="177.0" layoutY="106.0" prefHeight="26.0" prefWidth="186.0" />
+      <DatePicker fx:id="datePayend" layoutX="177.0" layoutY="152.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label layoutX="61.0" layoutY="250.0" text="TotalWork Days">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txttotalworkday" layoutX="177.0" layoutY="247.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label layoutX="61.0" layoutY="296.0" text="Salary">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtsalary" layoutX="177.0" layoutY="293.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label layoutX="61.0" layoutY="341.0" text="Overtime">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtovertime" layoutX="177.0" layoutY="338.0" prefHeight="26.0" prefWidth="186.0" />
+   </children>
+</AnchorPane>

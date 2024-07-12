@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="885.0" prefWidth="1540.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DrugList.DruglistController">
+   <children>
+      <AnchorPane layoutX="60.0" layoutY="42.6" prefHeight="175.0" prefWidth="1442.0" AnchorPane.bottomAnchor="615.8" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="38.40000000000009" AnchorPane.topAnchor="42.6">
+         <children>
+            <AnchorPane layoutX="233.0" layoutY="42.0" prefHeight="38.0" prefWidth="274.0">
+               <children>
+                  <TextField fx:id="searchDL" layoutX="-1.0" layoutY="8.0" prefHeight="31.0" prefWidth="278.0" promptText="SEARCH" styleClass="search" stylesheets="@../Style/Style.css" />
+                  <FontAwesomeIcon glyphName="SEARCH" layoutX="8.0" layoutY="29.0" size="1.5em" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="30.0" layoutY="34.0" text="Category" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnExportDL" layoutX="1283.0" layoutY="56.0" mnemonicParsing="false" onAction="#exportToPDF" prefHeight="31.0" prefWidth="103.0" styleClass="btn" stylesheets="@../Style/Style.css" text="Export" textAlignment="RIGHT" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="FILE" size="1.5em" />
+               </graphic>
+            </Button>
+            <Button fx:id="btnAdd" layoutX="1093.0" layoutY="56.0" mnemonicParsing="false" onMouseClicked="#showformAdd" prefHeight="31.0" prefWidth="140.0" styleClass="btn" stylesheets="@../Style/Style.css" text="Add New Product" textAlignment="RIGHT" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="PLUS" size="1.5em" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="70.0" layoutY="143.0" prefHeight="627.0" prefWidth="1458.0">
+         <children>
+            <TableView fx:id="tabledruglist" prefHeight="659.0" prefWidth="1442.0" stylesheets="@../Style/Style.css">
+              <columns>
+                <TableColumn fx:id="DL_Col_MedicineID" editable="false" prefWidth="79.0" sortable="false" text="ID" />
+                <TableColumn fx:id="DL_Col_MedicineName" editable="false" prefWidth="170.0" sortable="false" text="Medicine Name" />
+                  <TableColumn fx:id="DL_Col_API" editable="false" prefWidth="132.0" sortable="false" text="API" />
+                  <TableColumn fx:id="DL_Col_Quantity" editable="false" prefWidth="76.79998779296875" sortable="false" text="Quantity " />
+                  <TableColumn fx:id="DL_Col_Unit" editable="false" prefWidth="140.0" sortable="false" text="Unit" />
+                  <TableColumn fx:id="DL_Col_SUPU" editable="false" minWidth="0.0" prefWidth="145.5999755859375" sortable="false" text="Subunits Per Unit" />
+                  <TableColumn fx:id="DL_Col_SU" editable="false" minWidth="0.0" prefWidth="80.79998779296875" sortable="false" text="Subunit" />
+                  <TableColumn fx:id="DL_Col_IPSU" editable="false" minWidth="0.0" prefWidth="120.0" sortable="false" text="Items per subunit" />
+                  <TableColumn fx:id="DL_Col_Item" editable="false" minWidth="0.0" prefWidth="100.00006103515625" sortable="false" text="Item" />
+                  <TableColumn fx:id="DL_Col_CP" editable="false" prefWidth="138.4000244140625" sortable="false" text="Cost Price" />
+                  <TableColumn fx:id="DL_Col_SP" editable="false" minWidth="0.0" prefWidth="105.5999755859375" sortable="false" text="Selling Price" />
+                  <TableColumn fx:id="DL_Col_AC" editable="false" minWidth="0.0" prefWidth="172.800048828125" sortable="false" text="Action" />
+              </columns>
+               <styleClass>
+                  <String fx:value="talbe-view" />
+                  <String fx:value="column-hearder-background" />
+                  <String fx:value="column-hearder" />
+                  <String fx:value="filter" />
+                  <String fx:value="table-view" />
+                  <String fx:value="table-column" />
+               </styleClass>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Pagination fx:id="pgtDL" layoutX="71.0" layoutY="145.0" maxPageIndicatorCount="5" pageCount="20" prefHeight="699.0" prefWidth="1442.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jun 27, 2024, 2:49:50 PM
+    Author     : ADMIN
+*/
+
+
+
+.update-button {
+    -fx-background-color: #4CAF50; 
+    -fx-text-fill: white; 
+    -fx-padding: 5px 10px; 
+    -fx-border-radius: 5px; 
+    -fx-min-width: 80px;
+}
+
+.delete-button {
+    -fx-background-color: #f44336; 
+    -fx-text-fill: white; 
+    -fx-padding: 5px 10px; 
+    -fx-border-radius: 5px; 
+    -fx-min-width: 80px;
+}

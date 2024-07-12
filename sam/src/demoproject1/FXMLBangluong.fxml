@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="840.0" prefWidth="1540.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="demoproject1.FXMLBangluongController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="border" stylesheets="@../Design/style.css">
+         <children>
+            <BorderPane prefHeight="600.0" prefWidth="1500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="70.0" prefWidth="1495.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="-65.0" prefHeight="135.2" prefWidth="1800.0" styleClass="bg-header" stylesheets="@../Design/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="51.0" layoutY="21.0" text="Payroll">
+                                 <font>
+                                    <Font name="Arial Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txttukhoa" layoutX="251.0" layoutY="20.0" prefHeight="42.0" prefWidth="480.0" promptText="Search by Staff ID" />
+                              <Button fx:id="btnthempayroll" layoutX="1190.0" layoutY="29.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="122.0" styleClass="btn" stylesheets="@../Design/style.css" text="Payroll">
+                                 <font>
+                                    <Font name="Calibri Bold" size="19.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="PLUS" selectionFill="BLACK" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnExport" layoutX="1342.0" layoutY="29.0" mnemonicParsing="false" onAction="#exportToCSV" prefHeight="35.0" prefWidth="122.0" styleClass="btn" stylesheets="@../Design/style.css" text="Export">
+                                 <font>
+                                    <Font name="Calibri Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="FILE" selectionFill="BLACK" />
+                                 </graphic>
+                              </Button>
+                              <FontAwesomeIcon glyphName="SEARCH" layoutX="697.0" layoutY="49.0" size="2em" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets left="40.0" top="40.0" />
+                     </BorderPane.margin>
+                  </AnchorPane>
+               </top>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="94.0" layoutY="92.0" prefHeight="511.2" prefWidth="1300.0" styleClass="border" stylesheets="@../Design/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="16.0" layoutY="14.0" prefHeight="694.0" prefWidth="1280.0" styleClass="border" stylesheets="@../Design/style.css" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="3.0">
+                                 <children>
+                                    <TableView fx:id="tablepayroll" layoutX="3.2" layoutY="3.2" prefHeight="245.0" prefWidth="1273.0" stylesheets="@../Design/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="2.0">
+                                       <columns>
+                                          <TableColumn id="table-column" fx:id="cotID" minWidth="0.0" prefWidth="32.000000178813934" text="ID" />
+                                          <TableColumn id="table-column" fx:id="cotstaffid" prefWidth="65.59999084472656" text="Staff ID" />
+                                          <TableColumn id="table-column" fx:id="cotngaybatdau" prefWidth="159.99996948242188" text="PayPeriodStart" />
+                                          <TableColumn id="table-column" fx:id="cotngayketthuc" minWidth="0.0" prefWidth="162.40011596679688" text="PayPeriodEnd" />
+                                          <TableColumn id="table-column" fx:id="cotngaytieuchuan" minWidth="0.0" prefWidth="90.39996337890625" text="StandardDays" />
+                                          <TableColumn id="table-column" fx:id="cotgiotieuchuan" minWidth="0.0" prefWidth="126.4000244140625" text="StandardHours" />
+                                          <TableColumn id="table-column" fx:id="cotsongaylam" minWidth="0.0" prefWidth="129.5999755859375" text="TotalWorkDays" />
+                                          <TableColumn id="table-column" fx:id="cottangca" minWidth="0.0" prefWidth="87.199951171875" text="Overtime" />
+                                          <TableColumn id="table-column" fx:id="cottraluong" minWidth="0.0" prefWidth="137.60009765625" text="TotalPay" />
+                                          <TableColumn id="table-column" fx:id="cotSalary" minWidth="0.0" prefWidth="133.599853515625" text="Salary" />
+                                          <TableColumn id="table-column" fx:id="cotaction" minWidth="0.0" prefWidth="144.80007324218764" text="Action" />
+                                       </columns>
+                                       <styleClass>
+                                          <String fx:value="bg-white2" />
+                                          <String fx:value="talbe-view" />
+                                       </styleClass>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="border" stylesheets="@../Design/style.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <FontAwesomeIcon glyphName="USER" layoutX="64.0" layoutY="96.0" size="8em" />
+                        <Label layoutX="22.0" layoutY="120.0" text="Hello : " />
+                        <TextField layoutX="60.0" layoutY="116.0" prefHeight="26.0" prefWidth="130.0" />
+                        <Button fx:id="btnTimekeeping" layoutX="20.0" layoutY="163.0" mnemonicParsing="false" onAction="#goToChamluongFormFromBangluong" prefHeight="26.0" prefWidth="164.0" styleClass="btn2" stylesheets="@../Design/style.css" text="Timekeeping ">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                        <Button fx:id="btnStaff" layoutX="20.0" layoutY="204.0" mnemonicParsing="false" onAction="#goToNhanvienForm" prefHeight="26.0" prefWidth="164.0" styleClass="btn2" stylesheets="@../Design/style.css" text="Staff">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font></Button>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets left="40.0" />
+                     </BorderPane.margin>
+                  </AnchorPane>
+               </left>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

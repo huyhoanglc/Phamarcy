@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="833.0" prefWidth="1429.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sam.OrderTransactionController">
+   <children>
+      <AnchorPane prefHeight="833.0" prefWidth="1480.0">
+         <children>
+            <BorderPane layoutX="180.8" prefHeight="834.0" prefWidth="1530.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="40.0">
+               <top>
+                  <AnchorPane prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: skyblue;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text fill="#1c20f2" layoutX="43.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Transaction">
+                           <font>
+                              <Font name="Arial Bold" size="36.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <right>
+                  <AnchorPane prefHeight="734.0" prefWidth="320.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="43.0" prefHeight="677.0" prefWidth="303.0" style="-fx-background-color: white; -fx-background-radius: 10px; -fx-border-color: blue; -fx-border-radius: 10px; -fx-border-width: 2px;">
+                           <children>
+                              <TextField fx:id="OrderSearchCus" layoutX="14.0" layoutY="14.0" onAction="#osearch_cus" prefHeight="30.0" prefWidth="280.0" promptText="Customer" styleClass="search" stylesheets="@../css/eproject(1).css" />
+                              <FontAwesomeIcon glyphName="SEARCH" layoutX="21.0" layoutY="36.0" size="20" />
+                              <VBox fx:id="vbox" layoutX="4.0" layoutY="56.0" prefHeight="495.0" prefWidth="294.0" />
+                              <Line endX="100.0" layoutX="149.0" layoutY="553.0" startX="-100.0" />
+                              <Text layoutX="123.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total:" wrappingWidth="50.63671875">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="TotalPrice" layoutX="159.0" layoutY="579.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0đ" textAlignment="RIGHT" wrappingWidth="105.63671875">
+                                 <font>
+                                    <Font name="Arial Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="PayFinish" layoutX="31.0" layoutY="616.0" mnemonicParsing="false" onAction="#handlePayment" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: skyblue;" text="Pay" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="CancleAll" layoutX="160.0" layoutY="616.0" mnemonicParsing="false" onAction="#cancle_all" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: red;" text="Cancel" textFill="WHITE">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <RadioButton fx:id="PaymentCash" layoutX="75.0" layoutY="590.0" mnemonicParsing="false" onAction="#payment_cash" text="Cash" />
+                              <RadioButton fx:id="PaymentCard" layoutX="174.0" layoutY="590.0" mnemonicParsing="false" onAction="#payment_card" text="Card" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </right>
+               <center>
+                  <AnchorPane prefHeight="721.0" prefWidth="1190.0" style="-fx-background-color: lightblue;" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="OrderSearchItem" layoutX="41.0" onAction="#osearch_item" onKeyReleased="#handleKeyReleased" prefHeight="30.0" prefWidth="350.0" promptText="Search" styleClass="search" stylesheets="@../css/eproject(1).css" />
+                        <FontAwesomeIcon glyphName="SEARCH" layoutX="47.0" layoutY="22.0" size="20" />
+                      <AnchorPane layoutX="38.0" layoutY="44.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="662.0" prefWidth="1140.0" style="-fx-background-radius: 10px;">
+                           <children>
+                              <TableView fx:id="tableProduct" onDragDetected="#Table" prefHeight="652.0" prefWidth="1140.0" style="-fx-background-color: #fff;" stylesheets="@../Style/Style.css" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="Column_ItemID" prefWidth="152.00000190734863" style="-fx-border-radius: 20px; -fx-border-width: 2px 2px 2px 2px;" text="Product ID" />
+                                  <TableColumn fx:id="Column_ItemName" prefWidth="187.99998474121094" text="Product Name" />
+                                    <TableColumn fx:id="Column_Batch" minWidth="7.0" prefWidth="144.0" text="Batch No" />
+                                    <TableColumn fx:id="Column_ExpDate" prefWidth="192.79998779296875" text="Exp Date" />
+                                    <TableColumn fx:id="Column_Item" prefWidth="128.79998779296875" text="Item" />
+                                    <TableColumn fx:id="Column_Price" prefWidth="140.800048828125" text="Unit price" />
+                                    <TableColumn fx:id="Column_Quantity" prefWidth="191.199951171875" text="Quantity in stock" />
+                                </columns>
+                                 <styleClass>
+                                    <String fx:value="talbe-view" />
+                                    <String fx:value="column-hearder-background" />
+                                    <String fx:value="column-hearder" />
+                                    <String fx:value="filter" />
+                                    <String fx:value="table-column" />
+                                 </styleClass>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

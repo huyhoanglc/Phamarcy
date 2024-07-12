@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1450.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sam.FXMLStaffController">
+   <children>
+      <AnchorPane fx:id="main" prefHeight="800.0" prefWidth="1450.0" stylesheets="@../css/style.css">
+         <children>
+            <VBox layoutX="67.2" layoutY="58.4" prefHeight="227.0" prefWidth="1384.0" styleClass="pane" stylesheets="@../css/style.css" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="31.0" AnchorPane.topAnchor="58.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Dashboard" textFill="#707979">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Separator orientation="VERTICAL">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Separator>
+                        <Label layoutX="25.0" layoutY="25.0" text="Group2 Pharmacy" textFill="#4c4c4c">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Time" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="129.0" layoutY="25.0" maxWidth="1.7976931348623157E308" textFill="#7a7a7c" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="15.0" right="15.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="148.0" prefWidth="842.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="30.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox prefHeight="142.0" prefWidth="416.0">
+                           <children>
+                              <Label prefHeight="42.0" prefWidth="287.0" text="Results of today's sale" textFill="#4c4c4c">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="50.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox prefHeight="112.0" prefWidth="427.0">
+                                 <children>
+                                    <HBox prefHeight="112.0" prefWidth="186.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <FontAwesomeIcon fill="#5cac79" glyphName="DOLLAR" size="4EM">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="20.0" top="15.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                          <Separator orientation="VERTICAL" prefHeight="200.0">
+                                             <HBox.margin>
+                                                <Insets left="15.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets bottom="10.0" />
+                                             </padding>
+                                          </Separator>
+                                          <AnchorPane prefHeight="102.0" prefWidth="114.0">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <VBox layoutX="10.0" layoutY="-1.0" prefHeight="102.0" prefWidth="98.0">
+                                                   <children>
+                                                      <Label fx:id="totalBillsLabel" text="0 Invoices">
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="20.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="-5.0" top="-5.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <Label fx:id="totalRevenueLabel" layoutX="10.0" layoutY="25.0" text="0" textFill="#5cac79">
+                                                         <font>
+                                                            <Font name="System Bold" size="20.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="-5.0" top="-5.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <Label layoutX="10.0" layoutY="61.0" text="Revenue">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="-5.0" top="-5.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="-10.0" top="7.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                       <padding>
+                                          <Insets top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="112.0" prefWidth="190.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <FontAwesomeIcon fill="#9c9571" glyphName="UNDO" size="4em">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" left="20.0" top="15.0" />
+                                             </HBox.margin>
+                                          </FontAwesomeIcon>
+                                          <Separator orientation="VERTICAL" prefHeight="200.0">
+                                             <HBox.margin>
+                                                <Insets left="15.0" />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets bottom="10.0" />
+                                             </padding>
+                                          </Separator>
+                                          <AnchorPane prefHeight="102.0" prefWidth="106.0">
+                                             <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </HBox.margin>
+                                             <children>
+                                                <VBox layoutX="10.0" layoutY="-1.0" prefHeight="102.0" prefWidth="109.0">
+                                                   <children>
+                                                      <Label text="0 Returns">
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                         <font>
+                                                            <Font name="System Bold" size="20.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="-5.0" top="-5.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <Label layoutX="10.0" layoutY="25.0" text="0" textFill="#9c9571">
+                                                         <font>
+                                                            <Font name="System Bold" size="20.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="-5.0" top="-5.0" />
+                                                         </padding>
+                                                      </Label>
+                                                      <Label layoutX="10.0" layoutY="61.0" text="Returns">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                         <padding>
+                                                            <Insets left="-5.0" top="-5.0" />
+                                                         </padding>
+                                                      </Label>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="-10.0" top="7.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                       <padding>
+                                          <Insets left="-10.0" top="10.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="200.0">
+                           <HBox.margin>
+                              <Insets left="150.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </Separator>
+                        <VBox prefHeight="142.0" prefWidth="382.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label prefHeight="42.0" prefWidth="287.0" text="NOTIFICATION" textFill="#4c4c4c">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="414.0">
+                                 <children>
+                                    <ImageView fitHeight="56.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/enter_60px.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Label prefHeight="42.0" prefWidth="381.0" text="You just logged in as an Staff" textFill="#4c4c4c">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="8.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="545.0">
+                                 <children>
+                                    <ImageView fitHeight="56.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/error_60px.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Label fx:id="expiryCountLabel" prefHeight="42.0" prefWidth="479.0" text="There is 1 item that will expire within 1 months" textFill="#4c4c4c">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="8.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Button mnemonicParsing="false" onAction="#showProductExpiryInfoForm" prefHeight="46.0" prefWidth="50.0" styleClass="btn_hn" stylesheets="@../css/style.css">
+                                       <graphic>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../image/down_button_20px.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="67.0" layoutY="301.0" prefHeight="483.0" prefWidth="1062.0" styleClass="pane" stylesheets="@../css/style.css" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="31.40000000000009" AnchorPane.topAnchor="301.0">
+               <children>
+                  <HBox prefHeight="42.0" prefWidth="976.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="912.0" text="Net revenue today" textFill="#842c2c" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <AnchorPane prefHeight="484.0" prefWidth="1439.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <children>
+                        <LineChart fx:id="revenueChart" layoutX="21.0" layoutY="7.0" prefHeight="474.0" prefWidth="1384.0">
+                          <xAxis>
+                            <CategoryAxis prefHeight="21.0" prefWidth="1328.0" side="BOTTOM" fx:id="xAxis" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="yAxis" side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+       
+                  <AnchorPane prefHeight="453.0" prefWidth="44.0" style="-fx-background-color: white;">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="44.0" spacing="10.0" style="-fx-background-color: white;" AnchorPane.topAnchor="20.0">
+               <children>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/home.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/add.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/data.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/setting.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/backup.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+       <AnchorPane fx:id="opacityPane" prefHeight="802.0" prefWidth="1450.0" style="-fx-background-color: #000;" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0" />
+        <AnchorPane fx:id="drawerPane" prefHeight="772.0" prefWidth="140.0" style="-fx-background-color: #002d40;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="46.0">
+   <children>
+            <Label layoutX="8.0" prefHeight="28.0" prefWidth="132.0" text="WELLCOME STAFF" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="UserNameLB" layoutX="26.0" layoutY="27.0" prefHeight="30.0" prefWidth="98.0" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+      <VBox alignment="TOP_CENTER" layoutY="71.2" prefHeight="732.0" prefWidth="145.0" spacing="13.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="71.0">
+         <children>
+             <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleDashboardButtonClick" prefHeight="38.0" prefWidth="132.0" styleClass="btn" stylesheets="@../css/style.css" text="Home">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+                  <Button alignment="BASELINE_LEFT" layoutX="17.0" layoutY="176.0" mnemonicParsing="false" onAction="#handleCustomer" prefHeight="38.0" prefWidth="131.0" styleClass="btn" stylesheets="@../css/style.css" text="Customer">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Selling" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleSelling" prefHeight="38.0" prefWidth="134.0" styleClass="btn" stylesheets="@../css/style.css" text="Selling">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="Bills" alignment="BASELINE_LEFT" layoutX="16.0" layoutY="112.0" mnemonicParsing="false" onAction="#handleBills" prefHeight="38.0" prefWidth="134.0" styleClass="btn" stylesheets="@../css/style.css" text="Bills Transaction">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+            <Button fx:id="btnLogOut" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleLogout" prefHeight="38.0" prefWidth="138.0" styleClass="btn" stylesheets="@../css/style.css" text="LogOut">
+               <font>
+                  <Font size="16.0" />
+               </font>
+                     <VBox.margin>
+                        <Insets top="432.0" />
+                     </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
+      <AnchorPane layoutY="46.2" prefHeight="772.0" prefWidth="44.0" style="-fx-background-color: #002d40;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="46.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="44.0" spacing="20.0" style="-fx-background-color: #002d40;" AnchorPane.topAnchor="70.0">
+               <children>
+                  <ImageView fx:id="Home" fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/home.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Customer" fitHeight="46.0" fitWidth="32.0" layoutX="16.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/staff2_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Order" fitHeight="46.0" fitWidth="32.0" layoutX="16.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/shopping_basket_50px.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ImageView>
+                  <ImageView fx:id="Bill" fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/transaction_list_50px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Logout" fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Logout_50px.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="430.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+            <ImageView fitHeight="80.0" fitWidth="48.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/businessman_50px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="48.0" prefWidth="1542.0" style="-fx-background-color: #002d40;" AnchorPane.bottomAnchor="801.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="drawerImage" layoutY="3.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="9.0" styleClass="btn" stylesheets="@../css/style.css">
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/burger.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fx:id="exit" fitHeight="24.0" fitWidth="24.0" layoutX="1493.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1493.0" AnchorPane.rightAnchor="23.799999999999955">
+               <image>
+                  <Image url="@../image/exit.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="admin" layoutX="1413.0" layoutY="2.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="78.0" styleClass="btn_admin" stylesheets="@../css/style.css" text="Staff">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/male_user_20px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

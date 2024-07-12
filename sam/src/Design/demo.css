@@ -1,0 +1,38 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 7 thg 6, 2024, 08:40:55
+    Author     : nguye
+*/
+
+/*bang dieu khien*/
+.system-title{
+    -fx-background-color: #4a79c2;
+}
+
+.system-bgmenu{
+    -fx-background-color: #1a87a3;
+}
+
+.system-bgbtn{
+    -fx-background-color: #207b9d;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-border-color: white;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-cursor: hand;
+}
+.system-bgbtn:hover{
+    -fx-background-color: #6C7EE1;
+}
+
+.system-bg-pannel{
+    -fx-background-color: #ffffff;
+    -fx-padding: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box,rgba(0,0,0,0.5),5,0,0,0);
+}
